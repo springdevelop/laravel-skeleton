@@ -2,7 +2,7 @@
     "variables": [],
     "info": {
         "name": "Laravel API",
-        "_postman_id": "87cfe3d2-0662-41c1-92d8-c7807a6157c8",
+        "_postman_id": "249a5144-14c8-49a9-ba19-71ce529d2c2d",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
     },
@@ -89,7 +89,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"dolorem\",\n    \"desc\": \"animi\",\n    \"amount\": 3.669,\n    \"date_donate\": \"est\"\n}"
+                            "raw": "{\n    \"name\": \"fuga\",\n    \"desc\": \"nemo\",\n    \"amount\": 5624.645587,\n    \"date_donate\": \"vitae\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -117,7 +117,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"omnis\",\n    \"desc\": \"quia\",\n    \"amount\": 2125140.59,\n    \"date_donate\": \"aut\"\n}"
+                            "raw": "{\n    \"name\": \"sint\",\n    \"desc\": \"maiores\",\n    \"amount\": 42984.5,\n    \"date_donate\": \"aspernatur\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -130,6 +130,152 @@
                             "protocol": "http",
                             "host": "localhost",
                             "path": "api\/donates\/:id",
+                            "query": []
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "foundings",
+            "description": "",
+            "item": [
+                {
+                    "name": "index",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/foundings",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "show",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/foundings\/:id",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "store",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/foundings",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"date_founding\": \"maiores\",\n    \"founding\": 28020582.769775663,\n    \"currrent\": 26401\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "update",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/foundings\/:id",
+                            "query": []
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"date_founding\": \"eos\",\n    \"founding\": 242.4185429,\n    \"currrent\": 415438184.3\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "delete",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "localhost",
+                            "path": "api\/foundings\/:id",
                             "query": []
                         },
                         "method": "DELETE",
@@ -235,7 +381,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"et\",\n    \"desc\": \"dignissimos\",\n    \"amount\": 1395.56,\n    \"date_pay\": \"molestiae\"\n}"
+                            "raw": "{\n    \"name\": \"deserunt\",\n    \"desc\": \"error\",\n    \"amount\": 407.796,\n    \"date_pay\": \"doloribus\"\n}"
                         },
                         "description": "",
                         "response": []
@@ -263,7 +409,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"consectetur\",\n    \"desc\": \"nam\",\n    \"amount\": 67854.027,\n    \"date_pay\": \"nihil\"\n}"
+                            "raw": "{\n    \"name\": \"corrupti\",\n    \"desc\": \"quidem\",\n    \"amount\": 1077.639499995,\n    \"date_pay\": \"accusantium\"\n}"
                         },
                         "description": "",
                         "response": []

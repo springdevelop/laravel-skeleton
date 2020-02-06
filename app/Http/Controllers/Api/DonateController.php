@@ -32,7 +32,7 @@ class DonateController extends BaseController
     public function index()
     {
         $donates = $this->repository->all();
-        return new DonateCollection($donates);//$this->responseSuccess(new DonateCollection($donates));
+        return new DonateCollection($donates);//$return $this->responseSuccess(new DonateCollection($donates));
     }
 
     /**
@@ -48,7 +48,7 @@ class DonateController extends BaseController
         $inputs = $request->only('name', 'desc', 'amount', 'date_donate');
         $donate = $this->repository->create($inputs);
 
-        if($donate) return $this->responseSuccess(new DonateResource($donate));
+        if($donate) return new DonateResource($donate);//$this->responseSuccess(new DonateResource($donate));
 
         return $this->responseErrors(config('code.basic.save_failed'), trans('messages.validate.save_failed'));
     }

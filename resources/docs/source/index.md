@@ -61,38 +61,38 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Dr. Rodrigo Considine DDS",
-            "desc": "The poor little thing was to eat the comfits: this caused some noise and confusion, as the March Hare will be When they take us up and walking off to trouble myself about you: you must manage the.",
-            "amount": 2487.92877325,
-            "date_donate": "1999-07-04 09:46:27"
+            "name": "Miss Alisa Kuphal Jr.",
+            "desc": "Good-bye, feet!' (for when she found her head was so small as this before, never! And I declare it's too bad, that it was certainly not becoming. 'And that's the jury, who instantly made a.",
+            "amount": 37.15806732,
+            "date_donate": "2008-02-20 14:12:51"
         },
         {
             "id": 2,
-            "name": "Robert Casper",
-            "desc": "Yet you finished the guinea-pigs!' thought Alice. The poor little Lizard, Bill, was in a tone of delight, which changed into alarm in another moment, when she had got so close to them, and all her.",
-            "amount": 314440.414017401,
-            "date_donate": "1994-01-13 12:49:52"
+            "name": "Candelario Langworth",
+            "desc": "I shan't go, at any rate: go and take it away!' There was nothing so VERY remarkable in that; nor did Alice think it so yet,' said the Caterpillar decidedly, and there was nothing on it (as she had.",
+            "amount": 147.0813472,
+            "date_donate": "1980-05-22 11:35:27"
         },
         {
             "id": 3,
-            "name": "Serenity Kessler",
-            "desc": "THIS!' (Sounds of more energetic remedies--' 'Speak English!' said the White Rabbit: it was quite pleased to find any. And yet I wish you wouldn't have come here.' Alice didn't think that proved it.",
-            "amount": 4147358.3,
-            "date_donate": "2018-02-23 10:51:02"
+            "name": "Sid Zieme",
+            "desc": "Alice in a minute. Alice began to get rather sleepy, and went on in a natural way. 'I thought you did,' said the King, 'that saves a world of trouble, you know, with oh, such long ringlets, and mine.",
+            "amount": 57686,
+            "date_donate": "1973-01-15 16:40:06"
         },
         {
             "id": 4,
-            "name": "Deon Lind Sr.",
-            "desc": "Caterpillar. Alice folded her hands, and was going to be, from one foot to the beginning again?' Alice ventured to ask. 'Suppose we change the subject. 'Go on with the day and night! You see the.",
-            "amount": 52692.92,
-            "date_donate": "2019-04-05 04:17:53"
+            "name": "Neal Conroy",
+            "desc": "Said the mouse to the jury, who instantly made a memorandum of the Gryphon, with a teacup in one hand and a great thistle, to keep herself from being run over; and the other arm curled round her.",
+            "amount": 22635322.8,
+            "date_donate": "1992-05-24 02:58:26"
         },
         {
             "id": 5,
-            "name": "Kobe Conroy",
-            "desc": "Alice replied very solemnly. Alice was soon left alone. 'I wish I hadn't mentioned Dinah!' she said to the Gryphon. 'Do you know about this business?' the King said, turning to the beginning again?'.",
-            "amount": 818.4,
-            "date_donate": "2001-01-18 20:27:28"
+            "name": "Adrien Kautzer",
+            "desc": "I think--' (for, you see, because some of the lefthand bit of stick, and held out its arms folded, frowning like a telescope! I think I can guess that,' she added aloud. 'Do you take me for asking!.",
+            "amount": 21982.527048325,
+            "date_donate": "1984-05-08 19:56:15"
         }
     ]
 }
@@ -159,7 +159,7 @@ curl -X POST \
     "http://localhost/api/donates" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"dolorem","desc":"animi","amount":3.669,"date_donate":"est"}'
+    -d '{"name":"fuga","desc":"nemo","amount":5624.645587,"date_donate":"vitae"}'
 
 ```
 
@@ -174,10 +174,10 @@ let headers = {
 };
 
 let body = {
-    "name": "dolorem",
-    "desc": "animi",
-    "amount": 3.669,
-    "date_donate": "est"
+    "name": "fuga",
+    "desc": "nemo",
+    "amount": 5624.645587,
+    "date_donate": "vitae"
 }
 
 fetch(url, {
@@ -214,7 +214,7 @@ curl -X PUT \
     "http://localhost/api/donates/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"omnis","desc":"quia","amount":2125140.59,"date_donate":"aut"}'
+    -d '{"name":"sint","desc":"maiores","amount":42984.5,"date_donate":"aspernatur"}'
 
 ```
 
@@ -229,10 +229,10 @@ let headers = {
 };
 
 let body = {
-    "name": "omnis",
-    "desc": "quia",
-    "amount": 2125140.59,
-    "date_donate": "aut"
+    "name": "sint",
+    "desc": "maiores",
+    "amount": 42984.5,
+    "date_donate": "aspernatur"
 }
 
 fetch(url, {
@@ -297,6 +297,274 @@ fetch(url, {
 
 <!-- END_8ca6630d083c3119e65280e28a6e51eb -->
 
+#foundings
+
+
+<!-- START_8809cca67aaf148ea5a2bd4e6ac63cd6 -->
+## index
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/foundings" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/foundings"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "date_founding": "1989-07-26 11:03:15",
+            "founding": 748162932.139008,
+            "current": 202.60348
+        },
+        {
+            "id": 2,
+            "date_founding": "2013-06-06 03:56:47",
+            "founding": 402.079436223,
+            "current": 12
+        },
+        {
+            "id": 3,
+            "date_founding": "1984-02-15 15:30:20",
+            "founding": 22029476.97527236,
+            "current": 152537133.46
+        },
+        {
+            "id": 4,
+            "date_founding": "1992-05-02 16:44:08",
+            "founding": 541351693.9,
+            "current": 42490035.41
+        },
+        {
+            "id": 5,
+            "date_founding": "1997-05-26 04:11:24",
+            "founding": 55.7947556,
+            "current": 261.83423
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/foundings`
+
+
+<!-- END_8809cca67aaf148ea5a2bd4e6ac63cd6 -->
+
+<!-- START_4e4ed2d4316f47a56ab92a2891317813 -->
+## show
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/foundings/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/foundings/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (500):
+
+```json
+{
+    "message": "Server Error"
+}
+```
+
+### HTTP Request
+`GET api/foundings/{id}`
+
+
+<!-- END_4e4ed2d4316f47a56ab92a2891317813 -->
+
+<!-- START_3cd41946e26d25d8c6d437fa231a7935 -->
+## store
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/foundings" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"date_founding":"maiores","founding":28020582.769775663,"currrent":26401}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/foundings"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "date_founding": "maiores",
+    "founding": 28020582.769775663,
+    "currrent": 26401
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/foundings`
+
+#### Body Parameters
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    `date_founding` | string |  required  | Name of Founding
+        `founding` | number |  required  | Description of Founding
+        `currrent` | number |  required  | audio of Founding
+    
+<!-- END_3cd41946e26d25d8c6d437fa231a7935 -->
+
+<!-- START_3e9a9d2473d7460bbdff3a8b85d6a257 -->
+## update
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/api/foundings/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"date_founding":"eos","founding":242.4185429,"currrent":415438184.3}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/foundings/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "date_founding": "eos",
+    "founding": 242.4185429,
+    "currrent": 415438184.3
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT api/foundings/{id}`
+
+#### Body Parameters
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    `date_founding` | string |  required  | Name of Founding
+        `founding` | number |  required  | Description of Founding
+        `currrent` | number |  required  | audio of Founding
+    
+<!-- END_3e9a9d2473d7460bbdff3a8b85d6a257 -->
+
+<!-- START_59183a836e8a33e247f186338da20bbc -->
+## delete
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/api/foundings/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/foundings/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE api/foundings/{id}`
+
+
+<!-- END_59183a836e8a33e247f186338da20bbc -->
+
 #pays
 
 
@@ -338,38 +606,38 @@ fetch(url, {
     "data": [
         {
             "id": 1,
-            "name": "Edgardo Johnson",
-            "desc": "Caterpillar. 'Is that the Mouse with an anxious look at all for any lesson-books!' And so it was as much right,' said the Hatter: 'I'm on the trumpet, and then treading on her toes when they passed.",
-            "amount": 89.16942487,
-            "date_pay": "1994-07-12 13:09:08"
+            "name": "Brenda Turner IV",
+            "desc": "Caterpillar, and the whole party look so grave that she had found the fan she was always ready to sink into the Dormouse's place, and Alice was so much already, that it signifies much,' she said to.",
+            "amount": 13.884310056,
+            "date_pay": "1988-09-19 18:38:02"
         },
         {
             "id": 2,
-            "name": "Kale Legros",
-            "desc": "Caterpillar; and it said in a piteous tone. And she tried to look through into the wood. 'It's the first minute or two, they began moving about again, and said, very gravely, 'I think, you ought to.",
-            "amount": 39057022.2,
-            "date_pay": "1980-10-22 18:21:32"
+            "name": "Jeanette Hane",
+            "desc": "Latin Grammar, 'A mouse--of a mouse--to a mouse--a mouse--O mouse!') The Mouse gave a look askance-- Said he thanked the whiting kindly, but he could think of nothing better to say it out to the.",
+            "amount": 17.59518,
+            "date_pay": "1998-04-17 09:09:51"
         },
         {
             "id": 3,
-            "name": "Dr. Duane Boehm",
-            "desc": "Bill's got the other--Bill! fetch it back!' 'And who are THESE?' said the Lory hastily. 'I don't know what you had been to a mouse, you know. So you see, Miss, we're doing our best, afore she comes.",
-            "amount": 147.233367921,
-            "date_pay": "1992-08-28 08:25:32"
+            "name": "Dr. Jennings Trantow",
+            "desc": "Bill had left off sneezing by this very sudden change, but very glad to get through the door, and the White Rabbit cried out, 'Silence in the sun. (IF you don't explain it as a lark, And will talk.",
+            "amount": 62886,
+            "date_pay": "1986-05-08 19:25:37"
         },
         {
             "id": 4,
-            "name": "Elbert Dickens",
-            "desc": "Do you think you can have no answers.' 'If you please, sir--' The Rabbit Sends in a soothing tone: 'don't be angry about it. And yet I don't want to stay with it as she was beginning very angrily.",
-            "amount": 4463.9686,
-            "date_pay": "1993-04-29 01:15:13"
+            "name": "Keshawn Crooks",
+            "desc": "Queen, stamping on the top with its tongue hanging out of his head. But at any rate, the Dormouse into the sky. Twinkle, twinkle--\"' Here the Queen said to the jury, in a furious passion, and went.",
+            "amount": 12.7823724,
+            "date_pay": "1997-05-08 13:15:33"
         },
         {
             "id": 5,
-            "name": "Dr. Wilton Kuphal",
-            "desc": "The chief difficulty Alice found at first was moderate. But the snail replied \"Too far, too far!\" and gave a little bottle on it, for she thought, and looked very uncomfortable. The moment Alice.",
-            "amount": 0,
-            "date_pay": "1978-07-13 07:57:01"
+            "name": "Miss Verdie Stamm MD",
+            "desc": "I know is, something comes at me like a thunderstorm. 'A fine day, your Majesty!' the soldiers shouted in reply. 'Please come back and see how he did not get hold of its right ear and left foot, so.",
+            "amount": 2023175.9794887,
+            "date_pay": "2010-10-01 02:35:34"
         }
     ]
 }
@@ -436,7 +704,7 @@ curl -X POST \
     "http://localhost/api/pays" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"et","desc":"dignissimos","amount":1395.56,"date_pay":"molestiae"}'
+    -d '{"name":"deserunt","desc":"error","amount":407.796,"date_pay":"doloribus"}'
 
 ```
 
@@ -451,10 +719,10 @@ let headers = {
 };
 
 let body = {
-    "name": "et",
-    "desc": "dignissimos",
-    "amount": 1395.56,
-    "date_pay": "molestiae"
+    "name": "deserunt",
+    "desc": "error",
+    "amount": 407.796,
+    "date_pay": "doloribus"
 }
 
 fetch(url, {
@@ -491,7 +759,7 @@ curl -X PUT \
     "http://localhost/api/pays/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"consectetur","desc":"nam","amount":67854.027,"date_pay":"nihil"}'
+    -d '{"name":"corrupti","desc":"quidem","amount":1077.639499995,"date_pay":"accusantium"}'
 
 ```
 
@@ -506,10 +774,10 @@ let headers = {
 };
 
 let body = {
-    "name": "consectetur",
-    "desc": "nam",
-    "amount": 67854.027,
-    "date_pay": "nihil"
+    "name": "corrupti",
+    "desc": "quidem",
+    "amount": 1077.639499995,
+    "date_pay": "accusantium"
 }
 
 fetch(url, {
