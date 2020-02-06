@@ -1,42 +1,64 @@
----
-title: API Reference
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
 
-language_tabs:
-- bash
-- javascript
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
 
-includes:
 
-search: true
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
 
-toc_footers:
-- <a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a>
----
-<!-- START_INFO -->
-# Info
-
-Welcome to the generated API reference.
-[Get Postman Collection](http://localhost/docs/collection.json)
-
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
 <!-- END_INFO -->
-
-#donates
-
-
+<h1>donates</h1>
 <!-- START_9eac1ace8933c6275757591bd4dab502 -->
-## index
-
-> Example request:
-
-```bash
-curl -X GET \
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
     -G "http://localhost/api/donates" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/donates"
 );
 
@@ -49,15 +71,12 @@ fetch(url, {
     method: "GET",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (200):
-
-```json
-{
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
     "data": [
         {
             "id": 1,
@@ -95,29 +114,20 @@ fetch(url, {
             "date_donate": "1980-11-23 05:44:56"
         }
     ]
-}
-```
-
-### HTTP Request
-`GET api/donates`
-
-
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/donates</code></p>
 <!-- END_9eac1ace8933c6275757591bd4dab502 -->
-
 <!-- START_2176839b6a969296c381ef8e0accb291 -->
-## show
-
-> Example request:
-
-```bash
-curl -X GET \
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
     -G "http://localhost/api/donates/1" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/donates/1"
 );
 
@@ -130,41 +140,29 @@ fetch(url, {
     method: "GET",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (500):
-
-```json
-{
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
     "message": "Server Error"
-}
-```
-
-### HTTP Request
-`GET api/donates/{id}`
-
-
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/donates/{id}</code></p>
 <!-- END_2176839b6a969296c381ef8e0accb291 -->
-
 <!-- START_9ac55273f78d6131b077504805d37625 -->
-## store
-
-> Example request:
-
-```bash
-curl -X POST \
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
     "http://localhost/api/donates" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"name":"aut","desc":"incidunt","amount":58266.168,"date_donate":"vel"}'
-
-```
-
-```javascript
-const url = new URL(
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/donates"
 );
 
@@ -185,41 +183,60 @@ fetch(url, {
     headers: headers,
     body: body
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`POST api/donates`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `name` | string |  required  | Name of Donate
-        `desc` | string |  required  | Description of Donate
-        `amount` | number |  required  | audio of Donate
-        `date_donate` | string |  required  | time from of Donate
-    
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/donates</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Donate</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Donate</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Donate</td>
+</tr>
+<tr>
+<td><code>date_donate</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Donate</td>
+</tr>
+</tbody>
+</table>
 <!-- END_9ac55273f78d6131b077504805d37625 -->
-
 <!-- START_c7537dbe36d8e0117b8d7a3a035fe860 -->
-## update
-
-> Example request:
-
-```bash
-curl -X PUT \
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
     "http://localhost/api/donates/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"name":"asperiores","desc":"ad","amount":75846,"date_donate":"est"}'
-
-```
-
-```javascript
-const url = new URL(
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/donates/1"
 );
 
@@ -240,39 +257,58 @@ fetch(url, {
     headers: headers,
     body: body
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`PUT api/donates/{id}`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `name` | string |  required  | Name of Donate
-        `desc` | string |  required  | Description of Donate
-        `amount` | number |  required  | audio of Donate
-        `date_donate` | string |  required  | time from of Donate
-    
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/donates/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Donate</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Donate</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Donate</td>
+</tr>
+<tr>
+<td><code>date_donate</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Donate</td>
+</tr>
+</tbody>
+</table>
 <!-- END_c7537dbe36d8e0117b8d7a3a035fe860 -->
-
 <!-- START_8ca6630d083c3119e65280e28a6e51eb -->
-## delete
-
-> Example request:
-
-```bash
-curl -X DELETE \
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
     "http://localhost/api/donates/1" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/donates/1"
 );
 
@@ -285,35 +321,22 @@ fetch(url, {
     method: "DELETE",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`DELETE api/donates/{id}`
-
-
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/donates/{id}</code></p>
 <!-- END_8ca6630d083c3119e65280e28a6e51eb -->
-
-#foundings
-
-
+<h1>foundings</h1>
 <!-- START_8809cca67aaf148ea5a2bd4e6ac63cd6 -->
-## index
-
-> Example request:
-
-```bash
-curl -X GET \
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
     -G "http://localhost/api/foundings" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/foundings"
 );
 
@@ -326,15 +349,12 @@ fetch(url, {
     method: "GET",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (200):
-
-```json
-{
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
     "data": [
         {
             "id": 1,
@@ -367,29 +387,20 @@ fetch(url, {
             "current": 2142.5495
         }
     ]
-}
-```
-
-### HTTP Request
-`GET api/foundings`
-
-
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/foundings</code></p>
 <!-- END_8809cca67aaf148ea5a2bd4e6ac63cd6 -->
-
 <!-- START_4e4ed2d4316f47a56ab92a2891317813 -->
-## show
-
-> Example request:
-
-```bash
-curl -X GET \
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
     -G "http://localhost/api/foundings/1" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/foundings/1"
 );
 
@@ -402,41 +413,29 @@ fetch(url, {
     method: "GET",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (500):
-
-```json
-{
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
     "message": "Server Error"
-}
-```
-
-### HTTP Request
-`GET api/foundings/{id}`
-
-
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/foundings/{id}</code></p>
 <!-- END_4e4ed2d4316f47a56ab92a2891317813 -->
-
 <!-- START_3cd41946e26d25d8c6d437fa231a7935 -->
-## store
-
-> Example request:
-
-```bash
-curl -X POST \
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
     "http://localhost/api/foundings" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"date_founding":"aut","founding":306856.04495,"currrent":97.1}'
-
-```
-
-```javascript
-const url = new URL(
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/foundings"
 );
 
@@ -456,40 +455,54 @@ fetch(url, {
     headers: headers,
     body: body
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`POST api/foundings`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `date_founding` | string |  required  | Name of Founding
-        `founding` | number |  required  | Description of Founding
-        `currrent` | number |  required  | audio of Founding
-    
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/foundings</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_founding</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Founding</td>
+</tr>
+<tr>
+<td><code>founding</code></td>
+<td>number</td>
+<td>required</td>
+<td>Description of Founding</td>
+</tr>
+<tr>
+<td><code>currrent</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Founding</td>
+</tr>
+</tbody>
+</table>
 <!-- END_3cd41946e26d25d8c6d437fa231a7935 -->
-
 <!-- START_3e9a9d2473d7460bbdff3a8b85d6a257 -->
-## update
-
-> Example request:
-
-```bash
-curl -X PUT \
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
     "http://localhost/api/foundings/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"date_founding":"ipsum","founding":3116738.76638584,"currrent":459902788.74772394}'
-
-```
-
-```javascript
-const url = new URL(
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/foundings/1"
 );
 
@@ -509,38 +522,52 @@ fetch(url, {
     headers: headers,
     body: body
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`PUT api/foundings/{id}`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `date_founding` | string |  required  | Name of Founding
-        `founding` | number |  required  | Description of Founding
-        `currrent` | number |  required  | audio of Founding
-    
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/foundings/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_founding</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Founding</td>
+</tr>
+<tr>
+<td><code>founding</code></td>
+<td>number</td>
+<td>required</td>
+<td>Description of Founding</td>
+</tr>
+<tr>
+<td><code>currrent</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Founding</td>
+</tr>
+</tbody>
+</table>
 <!-- END_3e9a9d2473d7460bbdff3a8b85d6a257 -->
-
 <!-- START_59183a836e8a33e247f186338da20bbc -->
-## delete
-
-> Example request:
-
-```bash
-curl -X DELETE \
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
     "http://localhost/api/foundings/1" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/foundings/1"
 );
 
@@ -553,35 +580,22 @@ fetch(url, {
     method: "DELETE",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`DELETE api/foundings/{id}`
-
-
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/foundings/{id}</code></p>
 <!-- END_59183a836e8a33e247f186338da20bbc -->
-
-#pays
-
-
+<h1>pays</h1>
 <!-- START_ba9007cc72bbf6016b19687ea0f00405 -->
-## index
-
-> Example request:
-
-```bash
-curl -X GET \
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
     -G "http://localhost/api/pays" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/pays"
 );
 
@@ -594,15 +608,12 @@ fetch(url, {
     method: "GET",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (200):
-
-```json
-{
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
     "data": [
         {
             "id": 1,
@@ -640,29 +651,20 @@ fetch(url, {
             "date_pay": "2003-11-09 21:54:17"
         }
     ]
-}
-```
-
-### HTTP Request
-`GET api/pays`
-
-
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/pays</code></p>
 <!-- END_ba9007cc72bbf6016b19687ea0f00405 -->
-
 <!-- START_a6fccc6f8314b81a1cd45a7ae5edfba5 -->
-## show
-
-> Example request:
-
-```bash
-curl -X GET \
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
     -G "http://localhost/api/pays/1" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/pays/1"
 );
 
@@ -675,41 +677,29 @@ fetch(url, {
     method: "GET",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-> Example response (500):
-
-```json
-{
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
     "message": "Server Error"
-}
-```
-
-### HTTP Request
-`GET api/pays/{id}`
-
-
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/pays/{id}</code></p>
 <!-- END_a6fccc6f8314b81a1cd45a7ae5edfba5 -->
-
 <!-- START_da5c316b8e3c9ba35e8e3f8d05aa90ba -->
-## store
-
-> Example request:
-
-```bash
-curl -X POST \
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
     "http://localhost/api/pays" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"name":"impedit","desc":"fuga","amount":36538032.274248675,"date_pay":"mollitia"}'
-
-```
-
-```javascript
-const url = new URL(
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/pays"
 );
 
@@ -730,41 +720,60 @@ fetch(url, {
     headers: headers,
     body: body
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`POST api/pays`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `name` | string |  required  | Name of Pay
-        `desc` | string |  required  | Description of Pay
-        `amount` | number |  required  | audio of Pay
-        `date_pay` | string |  required  | time from of Pay
-    
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/pays</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Pay</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Pay</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Pay</td>
+</tr>
+<tr>
+<td><code>date_pay</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Pay</td>
+</tr>
+</tbody>
+</table>
 <!-- END_da5c316b8e3c9ba35e8e3f8d05aa90ba -->
-
 <!-- START_6454f801d2b2375416b7875103011a5c -->
-## update
-
-> Example request:
-
-```bash
-curl -X PUT \
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
     "http://localhost/api/pays/1" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"name":"harum","desc":"sunt","amount":3403.4231711,"date_pay":"repellendus"}'
-
-```
-
-```javascript
-const url = new URL(
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/pays/1"
 );
 
@@ -785,39 +794,58 @@ fetch(url, {
     headers: headers,
     body: body
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`PUT api/pays/{id}`
-
-#### Body Parameters
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    `name` | string |  required  | Name of Pay
-        `desc` | string |  required  | Description of Pay
-        `amount` | number |  required  | audio of Pay
-        `date_pay` | string |  required  | time from of Pay
-    
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/pays/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Pay</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Pay</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Pay</td>
+</tr>
+<tr>
+<td><code>date_pay</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Pay</td>
+</tr>
+</tbody>
+</table>
 <!-- END_6454f801d2b2375416b7875103011a5c -->
-
 <!-- START_2a70461def4c319dcaa74a88f1375204 -->
-## delete
-
-> Example request:
-
-```bash
-curl -X DELETE \
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
     "http://localhost/api/pays/1" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
-```
-
-```javascript
-const url = new URL(
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/pays/1"
 );
 
@@ -830,16 +858,18 @@ fetch(url, {
     method: "DELETE",
     headers: headers,
 })
-    .then(response => response.json())
-    .then(json => console.log(json));
-```
-
-
-
-### HTTP Request
-`DELETE api/pays/{id}`
-
-
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/pays/{id}</code></p>
 <!-- END_2a70461def4c319dcaa74a88f1375204 -->
-
-
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
