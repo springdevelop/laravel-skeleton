@@ -1,8 +1,17 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+        // Fonts
+        @import url('https://fonts.googleapis.com/css?family=Nunito');
+        // Variables
+        @import 'variables';
+        // Bootstrap
+        @import '~bootstrap/scss/bootstrap';
+        .logo-img {
+            img {
+                max-width: 120px;
+            }
+        }
+        
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            // background: url('/images/bg.jpg');
+            // background-size: cover;
+        }
