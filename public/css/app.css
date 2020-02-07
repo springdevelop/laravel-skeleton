@@ -10892,3 +10892,21 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@media screen and (max-width: 767px) {
+  .logo-img {
+    text-align: center;
+    width: 100vw;
+    padding-bottom: 15px;
+  }
+
+  .cdc-container .cdc {
+    width: 7em !important;
+    padding-bottom: 7em !important;
+  }
+
+  .cdc-container .cdc .cdc-text h2 {
+    font-size: 2em !important;
+    font-weight: 900;
+  }
+}
+

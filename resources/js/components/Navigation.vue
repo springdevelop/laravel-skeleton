@@ -16,11 +16,21 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@media screen and (max-width: 767px) {
+   nav {
+      h1{
+         font-size: 1.2em!important;
+         width: 100vw;
+         text-align: center;
+      }
+   }
+}
 nav{
    h1{
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #0833c5;
       text-transform: uppercase; 
+      font-size: 2em;
       text-shadow: 2px 2px 1px rgba(0,0,0,0.45);
    }
 }

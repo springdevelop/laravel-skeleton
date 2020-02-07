@@ -1,17 +1,33 @@
-        // Fonts
-        @import url('https://fonts.googleapis.com/css?family=Nunito');
-        // Variables
-        @import 'variables';
-        // Bootstrap
-        @import '~bootstrap/scss/bootstrap';
-        .logo-img {
-            img {
-                max-width: 120px;
-            }
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+.logo-img {
+    img {
+        max-width: 120px;
+    }
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    // background: url('/images/bg.jpg');
+    // background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+    .logo-img {
+        text-align: center;
+        width: 100vw;
+        padding-bottom: 15px;
+    }
+    .cdc-container .cdc {
+        width: 7em!important;
+        padding-bottom: 7em!important;
+        .cdc-text h2 {
+            font-size: 2em!important;
+            font-weight: 900;
         }
-        
-        body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            // background: url('/images/bg.jpg');
-            // background-size: cover;
-        }
+    }
+}

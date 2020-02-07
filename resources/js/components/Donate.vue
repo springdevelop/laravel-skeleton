@@ -6,7 +6,7 @@
                 <col width="5%" />
                 <col width="70%" />
                 <!-- <col width="20%" /> -->
-                <col width="15%" />
+                <col width="25%" />
             </colgroup>
             <thead>
                 <tr>
@@ -56,12 +56,10 @@ export default {
         box-shadow: 0 -5px 5px -5px #333, 5px 0 5px -5px #333, -5px 0 5px -5px #333;
     }
     th{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     h2{
         font-weight: 900;
         color: #2A569F;
-       
-
     }
 </style>

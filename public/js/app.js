@@ -6408,7 +6408,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "nav h1[data-v-d456e682] {\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\n  color: #0833c5;\n  text-transform: uppercase;\n  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.45);\n}\nnav.navbar[data-v-d456e682] {\n  border-bottom: 2px solid #0833c5;\n}", ""]);
+exports.push([module.i, "@media screen and (max-width: 767px) {\nnav h1[data-v-d456e682] {\n    font-size: 1.2em !important;\n    width: 100vw;\n    text-align: center;\n}\n}\nnav h1[data-v-d456e682] {\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\n  color: #0833c5;\n  text-transform: uppercase;\n  font-size: 2em;\n  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.45);\n}\nnav.navbar[data-v-d456e682] {\n  border-bottom: 2px solid #0833c5;\n}", ""]);
 
 // exports
 
@@ -6446,7 +6446,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.donates[data-v-aaf9adcc]{\n    width: 100%;\n}\ntable[data-v-aaf9adcc]{\n    box-shadow: 0 -5px 5px -5px #333, 5px 0 5px -5px #333, -5px 0 5px -5px #333;\n}\nth[data-v-aaf9adcc]{\n    font-size: 1.5em;\n}\nh2[data-v-aaf9adcc]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
+exports.push([module.i, "\n.donates[data-v-aaf9adcc]{\n    width: 100%;\n}\ntable[data-v-aaf9adcc]{\n    box-shadow: 0 -5px 5px -5px #333, 5px 0 5px -5px #333, -5px 0 5px -5px #333;\n}\nth[data-v-aaf9adcc]{\n    font-size: 1.3em;\n}\nh2[data-v-aaf9adcc]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
 
 // exports
 
@@ -40146,7 +40146,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("col", { attrs: { width: "70%" } }),
       _vm._v(" "),
-      _c("col", { attrs: { width: "15%" } })
+      _c("col", { attrs: { width: "25%" } })
     ])
   },
   function() {
