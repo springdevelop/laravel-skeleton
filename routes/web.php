@@ -19,4 +19,5 @@ Route::get('/getlogin', function () {
 });
 Auth::routes();
 
+Route::resource('donate', 'Web\DonateController')->middleware('auth');
 Route::get('/home', 'HomeController@index')->name('home');
