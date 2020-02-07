@@ -28,7 +28,7 @@
           },
      }
 </script>
-<style  scoped>
+<style scoped>
 .section-donate{
 }
 .footer{
