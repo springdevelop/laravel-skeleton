@@ -62,8 +62,8 @@ class PayController extends BaseController
      */
     public function show($id)
     {
-        $Pay = $this->repository->find($id);
-        if($Pay) return $this->responseSuccess(new PayResource($Pay));
+        $pay = $this->repository->find($id);
+        if($pay) return $this->responseSuccess(new PayResource($Pay));
 
         return $this->responseErrors(config('code.Pay.position_not_found'), trans('messages.Pay.position_not_found'));
     }

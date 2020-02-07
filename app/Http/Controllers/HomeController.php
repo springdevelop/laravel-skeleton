@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Resources\Api\DonateResource;
-use App\Http\Resources\Api\DonateCollection;
-use App\Http\Requests\Api\DonateStoreRequest;
-use App\Http\Requests\Api\DonateUpdateRequest;
 use App\Repositories\Contracts\DonateRepositoryInterface;
+use App\Repositories\Contracts\PayRepositoryInterface;
+use App\Repositories\Contracts\FoundingRepositoryInterface;
+
 
 class HomeController extends Controller
 {
@@ -16,9 +15,18 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    protected $donateRepository;
+    protected $payRepository;
+    protected $foundingRepository;
+
+    public function __construct(DonateRepositoryInterface $donateRepository,
+        PayRepositoryInterface $payRepository,
+        FoundingRepositoryInterface $foundingRepository)
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        $this->donateRepository = $donateRepository;
+        $this->payRepository = $payRepository;
+        $this->foundingRepository = $foundingRepository;
     }
 
     /**
@@ -28,6 +36,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $donateList = $this->donateRepository->all();
+        $payList = $this->payRepository->all();
+        $foundingList = $this->foundingRepository->all();
 
         return view('home');
     }
