@@ -40,6 +40,6 @@ class HomeController extends Controller
         $payList = $this->payRepository->all();
         $foundingList = $this->foundingRepository->all();
 
-        return view('home');
+        return view('home', ['foundings' => $foundingList, 'donates' => $donateList]);
     }
 }
