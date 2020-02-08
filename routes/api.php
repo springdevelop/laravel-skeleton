@@ -12,7 +12,26 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::group(['namespace' => 'Api'], function () {
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+    // Route::group(['middleware' => ['api','role:admin']], function () {
+
+        Route::get('donates', 'DonateController@index');
+        Route::get('donates/{id}', 'DonateController@show')->where('id','[0-9]+');
+        Route::post('donates', 'DonateController@store');
+        Route::put('donates/{id}', 'DonateController@update')->where('id','[0-9]+');
+        Route::delete('donates/{id}', 'DonateController@destroy');
+
+        Route::get('pays', 'PayController@index');
+        Route::get('pays/{id}', 'PayController@show')->where('id','[0-9]+');
+        Route::post('pays', 'PayController@store');
+        Route::put('pays/{id}', 'PayController@update')->where('id','[0-9]+');
+        Route::delete('pays/{id}', 'PayController@destroy');
+
+        Route::get('foundings', 'FoundingController@index');
+        Route::get('foundings/{id}', 'FoundingController@show')->where('id','[0-9]+');
+        Route::post('foundings', 'FoundingController@store');
+        Route::put('foundings/{id}', 'FoundingController@update')->where('id','[0-9]+');
+        Route::delete('foundings/{id}', 'FoundingController@destroy');
+    // });
 });

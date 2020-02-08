@@ -1,0 +1,875 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>donates</h1>
+<!-- START_9eac1ace8933c6275757591bd4dab502 -->
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/donates" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/donates"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "name": "Art Gibson",
+            "desc": "Who in the last few minutes, and she at once in the last time she heard a little animal (she couldn't guess of what work it would be only rustling in the kitchen that did not notice this question.",
+            "amount": 4,
+            "date_donate": "1976-05-28 08:00:55"
+        },
+        {
+            "id": 2,
+            "name": "Ephraim Schmidt",
+            "desc": "Alice. 'Off with her head down to her that she had wept when she next peeped out the verses on his slate with one finger, as he spoke. 'A cat may look at the door--I do wish I hadn't quite finished.",
+            "amount": 1.335382782,
+            "date_donate": "2013-05-25 17:55:38"
+        },
+        {
+            "id": 3,
+            "name": "Dr. Maurice Hamill",
+            "desc": "The March Hare had just begun to think to herself, 'Now, what am I to get into the air off all its feet at once, while all the creatures order one about, and shouting 'Off with his knuckles. It was.",
+            "amount": 1277734.4091377,
+            "date_donate": "2012-02-15 08:06:06"
+        },
+        {
+            "id": 4,
+            "name": "Prof. Dell Wunsch V",
+            "desc": "Cheshire Cat: now I shall ever see such a tiny little thing!' It did so indeed, and much sooner than she had finished, her sister on the spot.' This did not at all this time. 'I want a clean cup,'.",
+            "amount": 130312.61043911,
+            "date_donate": "2009-11-14 23:39:11"
+        },
+        {
+            "id": 5,
+            "name": "Cletus DuBuque",
+            "desc": "There was a very respectful tone, but frowning and making quite a conversation of it altogether; but after a minute or two to think about stopping herself before she came rather late, and the fan.",
+            "amount": 104.4271892,
+            "date_donate": "1980-11-23 05:44:56"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/donates</code></p>
+<!-- END_9eac1ace8933c6275757591bd4dab502 -->
+<!-- START_2176839b6a969296c381ef8e0accb291 -->
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/donates/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/donates/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Server Error"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/donates/{id}</code></p>
+<!-- END_2176839b6a969296c381ef8e0accb291 -->
+<!-- START_9ac55273f78d6131b077504805d37625 -->
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/donates" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"aut","desc":"incidunt","amount":58266.168,"date_donate":"vel"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/donates"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "aut",
+    "desc": "incidunt",
+    "amount": 58266.168,
+    "date_donate": "vel"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/donates</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Donate</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Donate</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Donate</td>
+</tr>
+<tr>
+<td><code>date_donate</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Donate</td>
+</tr>
+</tbody>
+</table>
+<!-- END_9ac55273f78d6131b077504805d37625 -->
+<!-- START_c7537dbe36d8e0117b8d7a3a035fe860 -->
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/donates/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"asperiores","desc":"ad","amount":75846,"date_donate":"est"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/donates/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "asperiores",
+    "desc": "ad",
+    "amount": 75846,
+    "date_donate": "est"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/donates/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Donate</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Donate</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Donate</td>
+</tr>
+<tr>
+<td><code>date_donate</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Donate</td>
+</tr>
+</tbody>
+</table>
+<!-- END_c7537dbe36d8e0117b8d7a3a035fe860 -->
+<!-- START_8ca6630d083c3119e65280e28a6e51eb -->
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/donates/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/donates/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/donates/{id}</code></p>
+<!-- END_8ca6630d083c3119e65280e28a6e51eb -->
+<h1>foundings</h1>
+<!-- START_8809cca67aaf148ea5a2bd4e6ac63cd6 -->
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/foundings" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/foundings"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "date_founding": "1989-11-12 08:55:42",
+            "founding": 374232462.44137,
+            "current": 12.494
+        },
+        {
+            "id": 2,
+            "date_founding": "1998-05-23 13:13:23",
+            "founding": 0.23,
+            "current": 346452748.3256219
+        },
+        {
+            "id": 3,
+            "date_founding": "2010-04-25 18:30:45",
+            "founding": 10166595.7,
+            "current": 104323406.977
+        },
+        {
+            "id": 4,
+            "date_founding": "2005-02-01 02:12:36",
+            "founding": 76986.0364824,
+            "current": 0
+        },
+        {
+            "id": 5,
+            "date_founding": "1993-06-22 08:02:43",
+            "founding": 36213614,
+            "current": 2142.5495
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/foundings</code></p>
+<!-- END_8809cca67aaf148ea5a2bd4e6ac63cd6 -->
+<!-- START_4e4ed2d4316f47a56ab92a2891317813 -->
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/foundings/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/foundings/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Server Error"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/foundings/{id}</code></p>
+<!-- END_4e4ed2d4316f47a56ab92a2891317813 -->
+<!-- START_3cd41946e26d25d8c6d437fa231a7935 -->
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/foundings" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"date_founding":"aut","founding":306856.04495,"currrent":97.1}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/foundings"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "date_founding": "aut",
+    "founding": 306856.04495,
+    "currrent": 97.1
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/foundings</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_founding</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Founding</td>
+</tr>
+<tr>
+<td><code>founding</code></td>
+<td>number</td>
+<td>required</td>
+<td>Description of Founding</td>
+</tr>
+<tr>
+<td><code>currrent</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Founding</td>
+</tr>
+</tbody>
+</table>
+<!-- END_3cd41946e26d25d8c6d437fa231a7935 -->
+<!-- START_3e9a9d2473d7460bbdff3a8b85d6a257 -->
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/foundings/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"date_founding":"ipsum","founding":3116738.76638584,"currrent":459902788.74772394}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/foundings/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "date_founding": "ipsum",
+    "founding": 3116738.76638584,
+    "currrent": 459902788.74772394
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/foundings/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_founding</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Founding</td>
+</tr>
+<tr>
+<td><code>founding</code></td>
+<td>number</td>
+<td>required</td>
+<td>Description of Founding</td>
+</tr>
+<tr>
+<td><code>currrent</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Founding</td>
+</tr>
+</tbody>
+</table>
+<!-- END_3e9a9d2473d7460bbdff3a8b85d6a257 -->
+<!-- START_59183a836e8a33e247f186338da20bbc -->
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/foundings/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/foundings/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/foundings/{id}</code></p>
+<!-- END_59183a836e8a33e247f186338da20bbc -->
+<h1>pays</h1>
+<!-- START_ba9007cc72bbf6016b19687ea0f00405 -->
+<h2>index</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/pays" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pays"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "name": "Leonie Ortiz",
+            "desc": "I think.' And she began thinking over all the things being alive; for instance, there's the arch I've got back to finish his story. CHAPTER IV. The Rabbit started violently, dropped the white kid.",
+            "amount": 3968227,
+            "date_pay": "1976-04-14 18:28:17"
+        },
+        {
+            "id": 2,
+            "name": "Betsy Kub",
+            "desc": "King. (The jury all wrote down on one knee as he wore his crown over the list, feeling very glad to find my way into that lovely garden. First, however, she went to the jury, who instantly made a.",
+            "amount": 172608.092350602,
+            "date_pay": "1976-10-31 13:24:08"
+        },
+        {
+            "id": 3,
+            "name": "Samara Green",
+            "desc": "The door led right into it. 'That's very curious!' she thought. 'I must be the right distance--but then I wonder what Latitude was, or Longitude I've got to the jury. They were indeed a.",
+            "amount": 83114.473885,
+            "date_pay": "2012-07-09 11:51:27"
+        },
+        {
+            "id": 4,
+            "name": "Bette Jacobson",
+            "desc": "CHAPTER IV. The Rabbit Sends in a very little use, as it was labelled 'ORANGE MARMALADE', but to her very much confused, 'I don't know of any good reason, and as Alice could see her after the birds!.",
+            "amount": 288880,
+            "date_pay": "2000-05-11 02:25:48"
+        },
+        {
+            "id": 5,
+            "name": "Madaline Moen",
+            "desc": "Table doesn't signify: let's try Geography. London is the same solemn tone, 'For the Duchess. 'Everything's got a moral, if only you can have no sort of way, 'Do cats eat bats?' and sometimes, 'Do.",
+            "amount": 0.61568,
+            "date_pay": "2003-11-09 21:54:17"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/pays</code></p>
+<!-- END_ba9007cc72bbf6016b19687ea0f00405 -->
+<!-- START_a6fccc6f8314b81a1cd45a7ae5edfba5 -->
+<h2>show</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/pays/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pays/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Server Error"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/pays/{id}</code></p>
+<!-- END_a6fccc6f8314b81a1cd45a7ae5edfba5 -->
+<!-- START_da5c316b8e3c9ba35e8e3f8d05aa90ba -->
+<h2>store</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/pays" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"impedit","desc":"fuga","amount":36538032.274248675,"date_pay":"mollitia"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pays"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "impedit",
+    "desc": "fuga",
+    "amount": 36538032.274248675,
+    "date_pay": "mollitia"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/pays</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Pay</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Pay</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Pay</td>
+</tr>
+<tr>
+<td><code>date_pay</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Pay</td>
+</tr>
+</tbody>
+</table>
+<!-- END_da5c316b8e3c9ba35e8e3f8d05aa90ba -->
+<!-- START_6454f801d2b2375416b7875103011a5c -->
+<h2>update</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/pays/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"harum","desc":"sunt","amount":3403.4231711,"date_pay":"repellendus"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pays/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "harum",
+    "desc": "sunt",
+    "amount": 3403.4231711,
+    "date_pay": "repellendus"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/pays/{id}</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Name of Pay</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>string</td>
+<td>required</td>
+<td>Description of Pay</td>
+</tr>
+<tr>
+<td><code>amount</code></td>
+<td>number</td>
+<td>required</td>
+<td>audio of Pay</td>
+</tr>
+<tr>
+<td><code>date_pay</code></td>
+<td>string</td>
+<td>required</td>
+<td>time from of Pay</td>
+</tr>
+</tbody>
+</table>
+<!-- END_6454f801d2b2375416b7875103011a5c -->
+<!-- START_2a70461def4c319dcaa74a88f1375204 -->
+<h2>delete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/pays/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/pays/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/pays/{id}</code></p>
+<!-- END_2a70461def4c319dcaa74a88f1375204 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
