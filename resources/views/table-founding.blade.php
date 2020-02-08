@@ -28,6 +28,7 @@
         <td class="text-center pr-3">{{$key+1}}</td>
         <td class="pl-2">
             {{date('d/m/Y', strtotime($founding->date_founding))}}
+
         </td>
         <td class="text-right">
             {{number_format($founding->founding,0,',','.')}} đ
