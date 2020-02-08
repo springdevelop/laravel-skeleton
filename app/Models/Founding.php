@@ -10,7 +10,6 @@ class Founding extends Model
     protected $fillable = [
         'date_founding',
         'founding',
-        'currrent',
-        
+        'current',
     ];
 }

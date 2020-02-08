@@ -39,7 +39,8 @@
                 <div class="form-group row">
                     <label for="name" class="col-md-4 col-form-label">Hiện tại</label>
                     <div class="col-md-8">
-                        <input id="currrent" type="text" class="form-control @error('currrent') is-invalid @enderror" name="currrent" value="{{ old('currrent') }}"  autocomplete="currrent">
+
+                        <input id="current" type="text" class="form-control @error('current') is-invalid @enderror" name="current" value="{{ old('current') }}"  autocomplete="current">
                         @error('currrent')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
