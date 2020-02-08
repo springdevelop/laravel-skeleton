@@ -11,5 +11,6 @@ class Founding extends Model
         'date_founding',
         'founding',
         'currrent',
+        
     ];
 }
