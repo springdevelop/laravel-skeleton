@@ -26,7 +26,7 @@
                    {{donate.desc}}
                 </td> -->
                 <td class="text-right">
-                    {{donate.amount}} vnđ
+                    {{donate.amount | toCurrency}}
                 </td>
                 </tr>
             </tbody>
