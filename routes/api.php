@@ -33,5 +33,11 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('foundings', 'FoundingController@store');
         Route::put('foundings/{id}', 'FoundingController@update')->where('id','[0-9]+');
         Route::delete('foundings/{id}', 'FoundingController@destroy');
+
+        Route::get('menus', 'MenuController@index');
+        Route::get('menus/{id}', 'MenuController@show')->where('id','[0-9]+');
+        Route::post('menus', 'MenuController@store');
+        Route::put('menus/{id}', 'MenuController@update')->where('id','[0-9]+');
+        Route::delete('menus/{id}', 'MenuController@destroy');
     // });
 });
