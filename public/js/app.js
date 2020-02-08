@@ -1763,13 +1763,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     this.$store.dispatch('loadFoundings');
   },
   computed: {
     foundings: function foundings() {
-      return this.$store.getters.getFoundings;
+      return this.$store.getters.getFoundings.sort(function (a, b) {
+        return new Date(a.date_founding) - new Date(b.date_founding);
+      });
     }
   },
   methods: {
@@ -1779,14 +1789,14 @@ __webpack_require__.r(__webpack_exports__);
     resolve: function resolve(founding) {
       var total = founding.founding + founding.current;
       var rs = [{
-        value: founding.current / total * 100
+        value: founding.current / founding.founding * 100
       } // {value: (founding.founding - founding.current) / total *100},
       ];
       return rs;
     },
     percentage: function percentage(founding) {
-      var total = founding.founding + founding.current;
-      return (founding.founding / total * 100).toFixed(1);
+      // var total = founding.founding + founding.current;
+      return (founding.current / founding.founding * 100).toFixed(1);
     }
   }
 });
@@ -6446,7 +6456,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.donates[data-v-aaf9adcc]{\n    width: 100%;\n}\ntable[data-v-aaf9adcc]{\n    box-shadow: 0 -5px 5px -5px #333, 5px 0 5px -5px #333, -5px 0 5px -5px #333;\n}\nth[data-v-aaf9adcc]{\n    font-size: 1.3em;\n}\nh2[data-v-aaf9adcc]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
+exports.push([module.i, "\n.donates[data-v-aaf9adcc]{\n    width: 100%;\n}\ntable[data-v-aaf9adcc]{\n    box-shadow: 0 -5px 5px -5px #333, 5px 0 5px -5px #333, -5px 0 5px -5px #333;\n}\nth[data-v-aaf9adcc]{\n    font-size: 1.1em;\n}\nh2[data-v-aaf9adcc]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
 
 // exports
 
@@ -6465,7 +6475,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.foundings[data-v-1d053e8b]{\n    display: flex;\n    justify-content: center;\n}\n.founding[data-v-1d053e8b]{\n    text-align: center;\n}\n.foundings .cdc[data-v-1d053e8b]{\n    max-width: 150px;\n}\n", ""]);
+exports.push([module.i, "\n.foundings[data-v-1d053e8b]{\n    display: flex;\n    justify-content: center;\n    flex-direction: row-reverse;\n    flex-wrap: wrap-reverse;\n    justify-content: space-around;\n}\n.founding[data-v-1d053e8b]{\n    text-align: center;\n}\n.foundings .cdc[data-v-1d053e8b]{\n    max-width: 150px;\n}\n.founding-square[data-v-1d053e8b],\n.current-square[data-v-1d053e8b]{\n    padding-left:20px;\n    position:relative;\n}\n.founding-square[data-v-1d053e8b]::before,\n.current-square[data-v-1d053e8b]::before{\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 15px;\n    height: 15px;\n    background: #FF6384;\n}\n.founding-square[data-v-1d053e8b]::before{\n    background: #EEEEEE;\n}\nh2[data-v-1d053e8b]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
 
 // exports
 
@@ -40091,7 +40101,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "donates col-12" }, [
+  return _c("div", { staticClass: "donates col-12 mt-5" }, [
     _c("h2", { staticClass: "pt-4 text-center text-uppercase" }, [
       _vm._v("Danh sách ủng hộ")
     ]),
@@ -40121,6 +40131,12 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
+              _c("td", { staticClass: "text-center" }, [
+                _vm._v(
+                  "\n               " + _vm._s(donate.desc) + "\n            "
+                )
+              ]),
+              _vm._v(" "),
               _c("td", { staticClass: "text-right" }, [
                 _vm._v(
                   "\n                " +
@@ -40144,9 +40160,11 @@ var staticRenderFns = [
     return _c("colgroup", [
       _c("col", { attrs: { width: "5%" } }),
       _vm._v(" "),
-      _c("col", { attrs: { width: "70%" } }),
+      _c("col", { attrs: { width: "50%" } }),
       _vm._v(" "),
-      _c("col", { attrs: { width: "25%" } })
+      _c("col", { attrs: { width: "35%" } }),
+      _vm._v(" "),
+      _c("col", { attrs: { width: "10%" } })
     ])
   },
   function() {
@@ -40158,6 +40176,8 @@ var staticRenderFns = [
         _c("th", { staticClass: "pr-3" }, [_vm._v("STT ")]),
         _vm._v(" "),
         _c("th", { staticClass: "pl-2" }, [_vm._v("Đươn vị/ Cá nhân")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-center" }, [_vm._v("Ghi chú")]),
         _vm._v(" "),
         _c("th", { staticClass: "text-right" }, [_vm._v("Số tiền")])
       ])
@@ -40213,38 +40233,57 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "foundings" },
-    _vm._l(_vm.foundings, function(founding) {
-      return _c(
-        "div",
-        { key: founding.id, staticClass: "founding p-3" },
-        [
-          _c(
-            "vc-donut",
-            {
-              attrs: {
-                size: 10,
-                unit: "em",
-                thickness: 30,
-                sections: _vm.resolve(founding)
-              }
-            },
-            [_c("h2", [_vm._v(_vm._s(_vm.percentage(founding)) + "%")])]
-          ),
-          _vm._v(" "),
-          _c("h2", { staticClass: "pt-2" }, [
-            _vm._v(_vm._s(_vm._f("moment")(founding.date_founding, "DD/MM")))
-          ])
-        ],
-        1
-      )
-    }),
-    0
-  )
+  return _c("div", { staticClass: "container" }, [
+    _c("h2", [_vm._v("Chương trình sẽ kéo dài đến:")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "foundings" },
+      _vm._l(_vm.foundings, function(founding) {
+        return _c(
+          "div",
+          { key: founding.id, staticClass: "founding p-3" },
+          [
+            _c(
+              "vc-donut",
+              {
+                attrs: {
+                  size: 10,
+                  unit: "em",
+                  thickness: 30,
+                  sections: _vm.resolve(founding)
+                }
+              },
+              [_c("h3", [_vm._v(_vm._s(_vm.percentage(founding)) + "%")])]
+            ),
+            _vm._v(" "),
+            _c("h2", { staticClass: "pt-2" }, [
+              _vm._v(_vm._s(_vm._f("moment")(founding.date_founding, "DD/MM")))
+            ])
+          ],
+          1
+        )
+      }),
+      0
+    ),
+    _vm._v(" "),
+    _vm._m(0)
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 text-center" }, [
+      _c("span", { staticClass: "current-square" }, [_vm._v("Số tiền ủng hộ")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "founding-square ml-2" }, [
+        _vm._v("Số tiền còn thiếu")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

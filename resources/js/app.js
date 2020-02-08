@@ -9,7 +9,7 @@ import 'vue-css-donut-chart/dist/vcdonut.css';
 
 Vue.use(Donut);
 Vue.use(require('vue-moment'));
-Vue.filter('toCurrency', function (value) {
+Vue.filter('toCurrency', function(value) {
     if (typeof value !== "number") {
         return value;
     }
