@@ -34,7 +34,7 @@
             {{number_format($founding->founding,0,',','.')}} đ
         </td>
         <td class="text-right">
-            {{number_format($founding->currrent,0,',','.')}} đ
+            {{number_format($founding->current,0,',','.')}} đ
         </td>
         <td class="text-right">
             <form action="{{ url('/founding', ['id' => $founding->id]) }}" method="post">
