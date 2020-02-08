@@ -37,7 +37,7 @@
             {{number_format($founding->current,0,',','.')}} đ
         </td>
         <td class="text-right">
-            <form action="{{ url('/founding', ['id' => $founding->id]) }}" method="post">
+            <form action="{{ url('/backend/founding', ['id' => $founding->id]) }}" method="post">
                 <input class="btn btn-danger btn-sm" type="submit" value="Delete" />
                 @method('delete')
                 @csrf

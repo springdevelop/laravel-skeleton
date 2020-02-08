@@ -1771,6 +1771,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     this.$store.dispatch('loadFoundings');
@@ -1787,7 +1789,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.dispatch("loadFoundings");
     },
     resolve: function resolve(founding) {
-      var total = founding.founding + founding.current;
+      // var total = founding.founding + founding.current;
       var rs = [{
         value: founding.current / founding.founding * 100
       } // {value: (founding.founding - founding.current) / total *100},
@@ -6475,7 +6477,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.foundings[data-v-1d053e8b]{\n    display: flex;\n    justify-content: center;\n    flex-direction: row-reverse;\n    flex-wrap: wrap-reverse;\n    justify-content: space-around;\n}\n.founding[data-v-1d053e8b]{\n    text-align: center;\n}\n.foundings .cdc[data-v-1d053e8b]{\n    max-width: 150px;\n}\n.founding-square[data-v-1d053e8b],\n.current-square[data-v-1d053e8b]{\n    padding-left:20px;\n    position:relative;\n}\n.founding-square[data-v-1d053e8b]::before,\n.current-square[data-v-1d053e8b]::before{\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 15px;\n    height: 15px;\n    background: #FF6384;\n}\n.founding-square[data-v-1d053e8b]::before{\n    background: #EEEEEE;\n}\nh2[data-v-1d053e8b]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
+exports.push([module.i, "\n.foundings[data-v-1d053e8b]{\n    display: flex;\n    justify-content: center;\n    flex-direction: row;\n    flex-wrap: wrap-reverse;\n    justify-content: space-around;\n}\n.founding[data-v-1d053e8b]{\n    text-align: center;\n}\n.foundings .cdc[data-v-1d053e8b]{\n    max-width: 150px;\n}\n.founding-square[data-v-1d053e8b],\n.current-square[data-v-1d053e8b]{\n    padding-left:20px;\n    position:relative;\n}\n.founding-square[data-v-1d053e8b]::before,\n.current-square[data-v-1d053e8b]::before{\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 15px;\n    height: 15px;\n    background: #FF6384;\n}\n.founding-square[data-v-1d053e8b]::before{\n    background: #EEEEEE;\n}\nh2[data-v-1d053e8b]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
 
 // exports
 
@@ -40109,7 +40111,7 @@ var render = function() {
     _c(
       "table",
       {
-        staticClass: "table table-striped table-hover mb-0",
+        staticClass: "table table-bordered table-hover mb-0",
         attrs: { id: "" }
       },
       [
@@ -40131,7 +40133,7 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _c("td", { staticClass: "text-center" }, [
+              _c("td", { staticClass: "text-justify" }, [
                 _vm._v(
                   "\n               " + _vm._s(donate.desc) + "\n            "
                 )
@@ -40171,13 +40173,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
+    return _c("thead", { staticClass: "thead-dark" }, [
       _c("tr", [
         _c("th", { staticClass: "pr-3" }, [_vm._v("STT ")]),
         _vm._v(" "),
         _c("th", { staticClass: "pl-2" }, [_vm._v("Đươn vị/ Cá nhân")]),
         _vm._v(" "),
-        _c("th", { staticClass: "text-center" }, [_vm._v("Ghi chú")]),
+        _c("th", {}, [_vm._v("Ghi chú")]),
         _vm._v(" "),
         _c("th", { staticClass: "text-right" }, [_vm._v("Số tiền")])
       ])
@@ -40248,13 +40250,13 @@ var render = function() {
               "vc-donut",
               {
                 attrs: {
-                  size: 10,
-                  unit: "em",
+                  size: 11,
+                  unit: "rem",
                   thickness: 30,
                   sections: _vm.resolve(founding)
                 }
               },
-              [_c("h3", [_vm._v(_vm._s(_vm.percentage(founding)) + "%")])]
+              [_c("h4", [_vm._v(_vm._s(_vm.percentage(founding)) + "% ")])]
             ),
             _vm._v(" "),
             _c("h2", { staticClass: "pt-2" }, [
@@ -58429,7 +58431,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logomoi.png?7c34b500e12a7c4a78d75981e9e6fa1b";
+module.exports = "/images/logomoi.png?19b6040b223075b918eabf7c03910247";
 
 /***/ }),
 

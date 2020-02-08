@@ -18,8 +18,9 @@ Route::get('/getlogin', function () {
     return view('auth.login');
 });
 Auth::routes();
-
-Route::resource('donate', 'Web\DonateController')->middleware('auth');
-Route::resource('founding', 'Web\FoundingController')->middleware('auth');
-Route::resource('menu', 'Web\MenuController')->middleware('auth');
+Route::group(['prefix'=>'backend','middleware' => ['auth']], function(){
+    Route::resource('donate', 'Web\DonateController');
+    Route::resource('menu', 'Web\MenuController');
+    Route::resource('founding', 'Web\FoundingController');
+});
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');

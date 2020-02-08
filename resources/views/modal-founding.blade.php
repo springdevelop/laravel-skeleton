@@ -11,7 +11,7 @@
 
         <!-- Modal body -->
         <div class="modal-body">
-            <form method="POST" action="/founding">
+            <form method="POST" action="/backend/founding">
                 @csrf
                 <div class="form-group row">
                     <label for="name" class="col-md-4 col-form-label">{{ __('Ngày đóng góp') }}</label>
