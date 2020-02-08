@@ -40124,8 +40124,8 @@ var render = function() {
               _c("td", { staticClass: "text-right" }, [
                 _vm._v(
                   "\n                " +
-                    _vm._s(donate.amount) +
-                    " vnđ\n            "
+                    _vm._s(_vm._f("toCurrency")(donate.amount)) +
+                    "\n            "
                 )
               ])
             ])
@@ -58487,6 +58487,18 @@ Vue.prototype.$http = axios;
 
 Vue.use(vue_css_donut_chart__WEBPACK_IMPORTED_MODULE_2___default.a);
 Vue.use(__webpack_require__(/*! vue-moment */ "./node_modules/vue-moment/dist/vue-moment.js"));
+Vue.filter('toCurrency', function (value) {
+  if (typeof value !== "number") {
+    return value;
+  }
+
+  var formatter = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+    minimumFractionDigits: 0
+  });
+  return formatter.format(value);
+});
 var app = new Vue({
   el: '#app',
   store: _js_store_js__WEBPACK_IMPORTED_MODULE_1__["default"],
