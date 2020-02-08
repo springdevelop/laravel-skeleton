@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Danh sách ủng hộ</div>
+                <div class="card-header">Menu</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,11 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    @include('table-donate')
+                    @include('table-menu')
                 </div>
             </div>
         </div>
     </div>
-    @include('modal-donate')
+    @include('modal-menu')
 </div>
 @endsection

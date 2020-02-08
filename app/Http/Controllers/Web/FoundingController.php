@@ -20,7 +20,7 @@ class FoundingController extends BaseController
     public function index()
     {
         $foundings = $this->repository->all();
-        return view('foundings.index', $foundings);
+        return view('web.foundings.index',['foundings' => $foundings]);
     }
 
     public function show($id) {
@@ -35,7 +35,6 @@ class FoundingController extends BaseController
     public function store(FoundingUpdateRequest $request) {
         $inputs = $request->only('date_founding', 'founding', 'current');
         $founding = $this->repository->create($inputs);
-
         if($founding) return redirect()->back()->with('msg', 'create success');
     }
 

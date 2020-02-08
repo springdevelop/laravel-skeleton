@@ -1,18 +1,18 @@
 <template>
     <div class="donates col-12 mt-5">
         <h2 class="pt-4 text-center text-uppercase">Danh sách ủng hộ</h2>
-        <table id="" class="table table-striped table-hover mb-0">
+        <table id="" class="table table-bordered table-hover mb-0">
             <colgroup>
                 <col width="5%" />
                 <col width="50%" />
                 <col width="35%" />
                 <col width="10%" />
             </colgroup>
-            <thead>
+            <thead class="thead-dark">
                 <tr>
                     <th class="pr-3">STT </th>
                     <th class="pl-2">Đươn vị/ Cá nhân</th>
-                    <th class="text-center">Ghi chú</th>
+                    <th class="">Ghi chú</th>
                     <th class="text-right">Số tiền</th>
                 </tr>
             </thead>
@@ -22,7 +22,7 @@
                 <td class="pl-2">
                    {{donate.name}}
                 </td>
-                <td class="text-center">
+                <td class="text-justify">
                    {{donate.desc}}
                 </td>
                 <td class="text-right">

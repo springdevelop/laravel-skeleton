@@ -3,7 +3,9 @@
     <h2>Chương trình sẽ kéo dài đến:</h2>
     <div class="foundings">
         <div class="founding p-3" v-for="founding in foundings" :key="founding.id" >
-           <vc-donut :size="10" unit="em" :thickness="30" :sections="resolve(founding)"><h3>{{percentage(founding)}}%</h3></vc-donut>
+           <vc-donut :size="11" unit="rem" :thickness="30" :sections="resolve(founding)"> 
+               <h4>{{percentage(founding)}}% </h4>
+            </vc-donut>
            <h2 class="pt-2">{{founding.date_founding | moment("DD/MM")}}</h2>
         </div>
        
@@ -31,7 +33,7 @@ export default {
             this.$store.dispatch("loadFoundings");
         },
         resolve(founding) {
-            var total = founding.founding + founding.current;
+            // var total = founding.founding + founding.current;
             var rs = [
                 {value: founding.current / founding.founding*100},
                 // {value: (founding.founding - founding.current) / total *100},
@@ -49,7 +51,7 @@ export default {
     .foundings{
         display: flex;
         justify-content: center;
-        flex-direction: row-reverse;
+        flex-direction: row;
         flex-wrap: wrap-reverse;
         justify-content: space-around;
     }

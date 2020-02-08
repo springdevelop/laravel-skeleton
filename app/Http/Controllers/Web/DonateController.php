@@ -19,8 +19,8 @@ class DonateController extends BaseController
 
     public function index()
     {
-        $donates = $this->repository->all();
-        return view('donates.index', $donates);
+        $donates = $this->repository->all();    
+        return view('web.donates.index', ['donates' =>$donates]);
     }
 
     public function show($id) {

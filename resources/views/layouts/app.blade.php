@@ -48,8 +48,20 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/backend/donate">Donate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/backend/founding">Founding</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/backend/menu">Menu</a>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle border-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
