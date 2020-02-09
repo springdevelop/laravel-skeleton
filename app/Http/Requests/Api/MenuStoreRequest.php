@@ -14,7 +14,6 @@ class MenuStoreRequest extends BaseRequest
         return [
             'name' => 'required',
             'link' => 'required',
-            'parent_id' => 'required|numeric',
         ];
     }
 }

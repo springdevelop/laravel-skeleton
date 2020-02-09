@@ -16,7 +16,7 @@ class CreatePayTable extends Migration
         Schema::create('pays', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('desc');
+            $table->string('desc')->nullable();;
             $table->double('amount')->default(0);
             $table->timestamp('date_pay')->useCurrent = true;
             $table->timestamps();

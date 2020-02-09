@@ -13,7 +13,6 @@ class PayStoreRequest extends BaseRequest
     {
         return [
             'name' => 'required|min:6',
-            'desc' => 'required',
             'amount' => 'required|numeric',
         ];
     }

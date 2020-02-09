@@ -16,7 +16,7 @@ class CreateDonateTable extends Migration
         Schema::create('donates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('desc');
+            $table->string('desc')->nullable();
             $table->double('amount')->default(0);
             $table->timestamp('date_donate')->useCurrent = true;
             $table->timestamps();
