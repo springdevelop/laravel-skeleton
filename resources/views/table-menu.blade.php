@@ -28,7 +28,7 @@
            {{$menu->link}}
         </td>
         <td class="text-right">
-            <form action="{{ url('/backend/menu', ['id' => $menu->id]) }}" method="post">
+            <form action="{{ url('/backend/menus', ['id' => $menu->id]) }}" method="post">
                 <input class="btn btn-danger btn-sm" type="submit" value="Delete" />
                 @method('delete')
                 @csrf

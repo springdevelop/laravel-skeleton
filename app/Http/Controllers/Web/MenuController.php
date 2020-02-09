@@ -34,7 +34,6 @@ class MenuController extends BaseController
 
     public function store(MenuUpdateRequest $request) {
         $inputs = $request->only('name', 'link', 'parent_id');
-        dd($inputs);
         $menu = $this->repository->create($inputs);
         
         if($menu) return redirect()->back()->with('msg', 'create success');

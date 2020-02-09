@@ -18,9 +18,11 @@ Route::get('/getlogin', function () {
     return view('auth.login');
 });
 Auth::routes();
+
 Route::group(['prefix'=>'backend','middleware' => ['auth']], function(){
     Route::resource('donate', 'Web\DonateController');
-    Route::resource('menu', 'Web\MenuController');
+
+    Route::resource('menus', 'Web\MenuController');
     Route::resource('founding', 'Web\FoundingController');
 });
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
