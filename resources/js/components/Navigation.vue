@@ -1,18 +1,20 @@
 <template>
-<nav class="navbar navbar-dark px-0 py-1 shadow">
+<nav class="navbar navbar-expand-md px-0 py-1 shadow">
    <div class="container">
-       <div class="logo"><a href="#" class="simple-text">
-         <div class="logo-img">
-            <img src="@/imgs/logomoi.png" alt="logo hueic" />
+         <a class="navbar-brand col-md-2" href="#"><img src="@/imgs/logomoi.png" alt="logo hueic" /></a>
+         <div class="text-right col-md-10">
+            <h1 class=" w-100">Chung tay cùng Hueic phòng chống dịch Corona</h1>
+            <Menu class="w-100"></Menu>
          </div>
-         </a>
-      </div>
-      <h1 class="">Chung tay cùng Hueic phòng chống dịch Corona</h1>
    </div>
 </nav>
 </template>
 <script>
+     import Menu from '@/js/components/Menu.vue'
 export default {
+   components: {
+      Menu
+   },
 }
 </script>
 <style lang="scss" scoped>
