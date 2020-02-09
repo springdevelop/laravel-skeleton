@@ -10884,6 +10884,10 @@ a.text-dark:focus {
   }
 }
 
+.navbar-brand img {
+  max-width: 100px;
+}
+
 .logo-img img {
   max-width: 100px;
 }

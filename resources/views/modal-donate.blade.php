@@ -45,8 +45,7 @@
                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Số tiền') }}</label>
 
                     <div class="col-md-6">
-                        <input id="amount" type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount') }}"  autocomplete="amount">
-
+                        <input id="amount" type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" value="{{ old('amount')?old('amount'):'0' }}"  autocomplete="amount">
                         @error('amount')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
