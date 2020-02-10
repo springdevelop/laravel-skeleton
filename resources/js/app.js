@@ -6,7 +6,9 @@ import App from '@/js/views/App'
 import store from '@/js/store.js'
 import Donut from 'vue-css-donut-chart';
 import 'vue-css-donut-chart/dist/vcdonut.css';
-
+import VueNumber from 'vue-number-animation'
+ 
+Vue.use(VueNumber)
 Vue.use(Donut);
 Vue.use(require('vue-moment'));
 Vue.filter('toCurrency', function(value) {
