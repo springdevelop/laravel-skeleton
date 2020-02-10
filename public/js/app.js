@@ -1773,6 +1773,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     this.$store.dispatch('loadFoundings');
@@ -6517,7 +6521,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.foundings[data-v-1d053e8b]{\n    display: flex;\n    justify-content: center;\n    flex-direction: row;\n    flex-wrap: wrap-reverse;\n    justify-content: space-around;\n}\n.founding[data-v-1d053e8b]{\n    text-align: center;\n}\n.foundings .cdc[data-v-1d053e8b]{\n    max-width: 150px;\n}\n.founding-square[data-v-1d053e8b],\n.current-square[data-v-1d053e8b]{\n    padding-left:20px;\n    position:relative;\n}\n.founding-square[data-v-1d053e8b]::before,\n.current-square[data-v-1d053e8b]::before{\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 15px;\n    height: 15px;\n    background: #FF6384;\n}\n.founding-square[data-v-1d053e8b]::before{\n    background: #EEEEEE;\n}\nh2[data-v-1d053e8b]{\n    font-weight: 900;\n    color: #2A569F;\n}\n", ""]);
+exports.push([module.i, "\n.foundings[data-v-1d053e8b]{\n    display: flex;\n    justify-content: center;\n    flex-direction: row;\n    flex-wrap: wrap-reverse;\n    justify-content: space-around;\n}\n.founding[data-v-1d053e8b]{\n    text-align: center;\n    position: relative;\n}\n.foundings .cdc[data-v-1d053e8b]{\n    max-width: 150px;\n}\n.founding-square[data-v-1d053e8b],\n.current-square[data-v-1d053e8b]{\n    padding-left:20px;\n    position:relative;\n}\n.founding-square[data-v-1d053e8b]::before,\n.current-square[data-v-1d053e8b]::before{\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 15px;\n    height: 15px;\n    background: #FF6384;\n}\n.founding-square[data-v-1d053e8b]::before{\n    background: #EEEEEE;\n}\nh2[data-v-1d053e8b]{\n    font-weight: 900;\n    color: #2A569F;\n}\n.show-current[data-v-1d053e8b],\n.show-founding[data-v-1d053e8b]{\n    position: absolute;\n    opacity: 0;\n    transition: all 0.5s linear;\n    color: #2a569f;\n}\n.show-current[data-v-1d053e8b]{\n    right: calc( 50% + 15px);\n    top: 20px;\n    z-index: 100;\n}\n.show-founding[data-v-1d053e8b]{\n    left: calc( 50% + 15px);\n    top: 20px;\n    z-index: 100;\n}\n.founding:hover  .show-current[data-v-1d053e8b],\n.founding:hover .show-founding[data-v-1d053e8b]{\n    opacity: 1;\n}\n", ""]);
 
 // exports
 
@@ -40335,6 +40339,10 @@ var render = function() {
           "div",
           { key: founding.id, staticClass: "founding p-3" },
           [
+            _c("span", { staticClass: "show-founding" }, [
+              _vm._v(_vm._s(_vm._f("toCurrency")(founding.founding)))
+            ]),
+            _vm._v(" "),
             _c(
               "vc-donut",
               {
@@ -40347,6 +40355,10 @@ var render = function() {
               },
               [_c("h4", [_vm._v(_vm._s(_vm.percentage(founding)) + "% ")])]
             ),
+            _vm._v(" "),
+            _c("span", { staticClass: "show-current" }, [
+              _vm._v(_vm._s(_vm._f("toCurrency")(founding.current)))
+            ]),
             _vm._v(" "),
             _c("h2", { staticClass: "pt-2" }, [
               _vm._v(_vm._s(_vm._f("moment")(founding.date_founding, "DD/MM")))
