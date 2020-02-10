@@ -3,12 +3,12 @@
     <h2>Chương trình sẽ kéo dài đến:</h2>
     <div class="foundings">
         <div class="founding p-3" v-for="founding in foundings" :key="founding.id" >
-                <span class="show-founding">{{founding.founding | toCurrency}}</span>
-           
+            <span class="show-founding">Cần thêm: {{founding.founding - founding.current | toCurrency}}</span>
            <vc-donut :size="11" unit="rem" :thickness="30" :sections="resolve(founding)"> 
                <h4>{{percentage(founding)}}% </h4>
+                <span class="show-total">Cần dùng: {{founding.founding | toCurrency}}</span>
             </vc-donut>
-                <span class="show-current">{{founding.current | toCurrency}}</span>
+            <span class="show-current">Đã có: {{founding.current | toCurrency}}</span>
 
            <h2 class="pt-2">{{founding.date_founding | moment("DD/MM")}}</h2>
         </div>
@@ -89,6 +89,7 @@ export default {
         color: #2A569F;
     }
     .show-current,
+    .show-total,
     .show-founding{
         position: absolute;
         opacity: 0;
@@ -96,14 +97,23 @@ export default {
         color: #2a569f;
     }
     .show-current{
-        right: calc( 50% + 15px);
+        left: calc( 50% + 15px);
         top: 20px;
         z-index: 100;
     }
     .show-founding{
-        left: calc( 50% + 15px);
+         right: calc( 50% + 15px);
         top: 20px;
         z-index: 100;
+    }
+    .show-total{
+        position: relative;
+        display:none;
+    }
+    .founding:hover .show-total{
+        display: block;
+        opacity: 1;
+
     }
     .founding:hover  .show-current,
     .founding:hover .show-founding{
