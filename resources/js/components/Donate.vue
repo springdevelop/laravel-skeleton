@@ -12,7 +12,7 @@
                 <tr>
                     <th class="pr-3">STT </th>
                     <th class="pl-2">Đơn vị/ Cá nhân</th>
-                    <th class="">Ghi chú</th>
+                    <th class="">Ủng hộ</th>
                     <th class="text-right">Số tiền</th>
                 </tr>
             </thead>

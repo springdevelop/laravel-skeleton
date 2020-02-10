@@ -40268,7 +40268,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { staticClass: "pl-2" }, [_vm._v("Đơn vị/ Cá nhân")]),
         _vm._v(" "),
-        _c("th", {}, [_vm._v("Ghi chú")]),
+        _c("th", {}, [_vm._v("Ủng hộ")]),
         _vm._v(" "),
         _c("th", { staticClass: "text-right" }, [_vm._v("Số tiền")])
       ])

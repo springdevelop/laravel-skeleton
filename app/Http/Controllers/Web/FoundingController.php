@@ -6,6 +6,7 @@ use App\Models\Founding;
 use App\Http\Requests\Api\FoundingStoreRequest;
 use App\Http\Requests\Api\FoundingUpdateRequest;
 use App\Repositories\Contracts\FoundingRepositoryInterface;
+use Carbon\Carbon;
 
 class FoundingController extends BaseController
 {
@@ -25,11 +26,15 @@ class FoundingController extends BaseController
 
     public function show($id) {
         $founding = $this->repository->find($id);
-        if($founding) return view('foundings.show', $founding);
+        if($founding) return view('web.foundings.show', $founding);
     }
 
     public function create() {
-        return view('foundings.new');
+        return view('web.foundings.new');
+    }
+    public function edit($id) {
+        $founding = $this->repository->find($id);
+        if($founding)  return view('web.foundings.edit',['founding' => $founding]);
     }
 
     public function store(FoundingUpdateRequest $request) {
@@ -41,8 +46,8 @@ class FoundingController extends BaseController
     public function update(FoundingUpdateRequest $request, $id)
     {
         $inputs = $request->only('date_founding', 'founding', 'current');
+        $inputs['date_founding'] = Carbon::createFromFormat('d/m/Y', $inputs['date_founding']);
         $founding = $this->repository->find($id);
-
         if($founding){
             $updated = $this->repository->update($founding, $inputs);
             if ($updated) {

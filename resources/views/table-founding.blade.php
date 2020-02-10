@@ -6,9 +6,9 @@
         <col width="5%" />
         <col width="30%" />
         <!-- <col width="20%" /> -->
-        <col width="30%" />
-        <col width="30%" />
-        <col width="5%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="15%" />
 
     </colgroup>
     <thead>
@@ -36,7 +36,8 @@
         <td class="text-right">
             {{number_format($founding->current,0,',','.')}} đ
         </td>
-        <td class="text-right">
+        <td class="d-flex">
+            <a class="btn btn-primary btn-sm mr-1" href="/backend/founding/{{$founding->id}}/edit">edit</a>
             <form action="{{ url('/backend/founding', ['id' => $founding->id]) }}" method="post">
                 <input class="btn btn-danger btn-sm" type="submit" value="Delete" />
                 @method('delete')

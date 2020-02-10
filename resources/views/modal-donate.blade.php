@@ -29,10 +29,10 @@
                 </div>
                 <div class="form-group row">
 
-                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Mô tả') }}</label>
+                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Ủng hộ') }}</label>
 
                     <div class="col-md-6">
-                        <textarea id="desc" type="text" class="form-control @error('desc') is-invalid @enderror" name="desc" value="{{ old('desc') }}"  autocomplete="Mô tả"></textarea>
+                        <textarea id="desc" type="text" class="form-control @error('desc') is-invalid @enderror" name="desc" value="{{ old('desc')?old('desc'): 'Số tiền' }}"  autocomplete="Mô tả">{{ old('desc')?old('desc'): 'Số tiền' }}</textarea>
 
                         @error('desc')
                             <span class="invalid-feedback" role="alert">
