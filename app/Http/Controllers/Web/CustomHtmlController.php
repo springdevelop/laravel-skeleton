@@ -19,7 +19,7 @@ class CustomHtmlController extends BaseController
     public function index()
     {
         $customHtmls = $this->repository->all();    
-        return view('web.customhtmls.index', ['customHtmls' =>$customHtmls]);
+        return view('web.customHtmls.index', ['customHtmls' =>$customHtmls]);
     }
 
    
