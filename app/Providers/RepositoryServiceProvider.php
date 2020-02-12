@@ -13,6 +13,8 @@ class RepositoryServiceProvider extends ServiceProvider
         \App\Repositories\Contracts\PayRepositoryInterface::class => \App\Repositories\PayRepository::class,
         \App\Repositories\Contracts\FoundingRepositoryInterface::class => \App\Repositories\FoundingRepository::class,
         \App\Repositories\Contracts\MenuRepositoryInterface::class => \App\Repositories\MenuRepository::class,
+        \App\Repositories\Contracts\CustomHtmlRepositoryInterface::class => \App\Repositories\CustomHtmlRepository::class,
+
     ];
 
     /**

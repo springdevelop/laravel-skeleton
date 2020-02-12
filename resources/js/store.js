@@ -17,12 +17,13 @@ Vue.use(Vuex)
 import { donates } from '@/js/modules/donates.js';
 import { foundings } from '@/js/modules/foundings.js';
 import { menus } from '@/js/modules/menus.js';
-
+import { customhtmls } from '@/js/modules/customhtmls.js';
 
 export default new Vuex.Store({
     modules: {
         donates,
         foundings,
-        menus
+        menus,
+        customhtmls
     }
 });

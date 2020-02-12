@@ -14,7 +14,6 @@ use Illuminate\Http\Request;
 */
 Route::group(['namespace' => 'Api'], function () {
 
-    // Route::group(['middleware' => ['api','role:admin']], function () {
 
         Route::get('donates', 'DonateController@index');
         Route::get('donates/{id}', 'DonateController@show')->where('id','[0-9]+');
@@ -39,5 +38,7 @@ Route::group(['namespace' => 'Api'], function () {
         Route::post('menus', 'MenuController@store');
         Route::put('menus/{id}', 'MenuController@update')->where('id','[0-9]+');
         Route::delete('menus/{id}', 'MenuController@destroy');
-    // });
+        
+        Route::get('custom-html', 'CustomHtmlController@index');
+        Route::get('custom-html/{id}', 'MenuController@show')->where('id','[0-9]+');
 });

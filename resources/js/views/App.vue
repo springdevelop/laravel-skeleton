@@ -3,6 +3,7 @@
      <navigation></navigation>
      <div class="">
             <main role="main" class="py-4">
+                 <custom-html></custom-html>
                  <founding></founding>
                  <div class="section-donate">
                       <div class="container">
@@ -21,10 +22,11 @@
      import Founding from '@/js/components/Founding.vue'
      import Donate from '@/js/components/Donate.vue'
      import PageFooter from '@/js/components/Footer.vue'
+     import CustomHtml from '@/js/components/CustomHtml.vue'
 
      export default {
           components: {
-               Navigation, Founding, Donate, PageFooter
+               Navigation, Founding, Donate, PageFooter, CustomHtml
           },
      }
 </script>
