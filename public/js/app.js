@@ -1893,6 +1893,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     this.$store.dispatch('loadMenus');
@@ -6605,7 +6607,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#menu-top[data-v-7fa2c4ca] {\n   justify-content: flex-end;\n}\n", ""]);
+exports.push([module.i, "\n#menu-top[data-v-7fa2c4ca] {\n   justify-content: flex-end;\n}\n.nav-item[data-v-7fa2c4ca]{\n   padding: 5px 10px;\n}\n.navbar-expand-md .navbar-nav .nav-link[data-v-7fa2c4ca]{\n   padding-left: 0!important;\n   padding-right: 0!important;\n}\n.nav-link[data-v-7fa2c4ca]{\n   text-transform: uppercase;\n   position: relative;\n   padding: 0;\n}\n.navbar-toggler[data-v-7fa2c4ca] {\n   position: fixed;\n   top:20px;\n   left: 20px;\n   z-index: 100;\n}\n.nav-item:hover .nav-link[data-v-7fa2c4ca]{\n   color: #F9853C;\n}\n.nav-item .nav-link[data-v-7fa2c4ca]::before{\n   content: \"\";\n   width: 0;\n   height: 1px;\n   position: absolute;\n   left: 0;\n   bottom: 0;\n   z-index: 1000;\n   transition: all 0.2s linear;\n   background-color: #F9853C;\n}\n.nav-item:hover .nav-link[data-v-7fa2c4ca]::before{\n   width: 100%;\n}\n@media screen and (max-width: 767px) {\n.collapse[data-v-7fa2c4ca]:not(.show) {\n    display: block;\n}\n.navbar-nav .nav-item .nav-link[data-v-7fa2c4ca]{\n      padding: 15px 20px;\n      border-bottom: 1px solid #888;\n}\n.navbar-nav .nav-item[data-v-7fa2c4ca]:hover{\n      background-color: #2a569f;\n}\n.navbar-light .navbar-nav .nav-link[data-v-7fa2c4ca]{\n      color: #2a569f;\n      text-align: center;\n}\n.navbar-nav .nav-item:hover .nav-link[data-v-7fa2c4ca]{\n      color: #fff;\n}\n.navbar-nav[data-v-7fa2c4ca]{\n      width: 100%;\n}\n#menu-top[data-v-7fa2c4ca]{\n      position: fixed;\n      top: 0;\n      right: 0;\n      height: 100vh;\n      width: 70%;\n      background-color: rgba(0, 0, 0, 0.9);\n      box-shadow: -5px 0 5px -5px #333;\n      z-index: 1000;\n      transition: all 0.5s linear;\n}\n#menu-top[data-v-7fa2c4ca]:not(.show){\n      transform: translate(100%, 0);\n}\n.collapsing[data-v-7fa2c4ca] {\n      position: fixed;\n      height: 100vh;\n      overflow:unset;\n      transition: all 0.5 linear;\n}\n}\n", ""]);
 
 // exports
 
@@ -49275,7 +49277,11 @@ var staticRenderFns = [
           "aria-label": "Toggle navigation"
         }
       },
-      [_c("span", { staticClass: "navbar-toggler-icon" })]
+      [
+        _c("span", { staticClass: "navbar-toggler-icon" }, [
+          _c("i", { staticClass: "fas fa-bars fa-1x" })
+        ])
+      ]
     )
   }
 ]
@@ -49302,7 +49308,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "nav",
-    { staticClass: "navbar navbar-expand-md px-0 py-1 shadow" },
+    { staticClass: "navbar navbar-expand-md navbar-light px-0 py-1 shadow" },
     [
       _c("div", { staticClass: "container" }, [
         _vm._m(0),
@@ -49311,8 +49317,8 @@ var render = function() {
           "div",
           { staticClass: "text-right col-md-10" },
           [
-            _c("h1", { staticClass: " w-100" }, [
-              _vm._v("Chung tay cùng Hueic phòng chống dịch Corona")
+            _c("h1", { staticClass: " w-100 mb-3" }, [
+              _vm._v("Chung tay cùng Hueic phòng chống dịch")
             ]),
             _vm._v(" "),
             _c("Menu", { staticClass: "w-100" })
@@ -49330,7 +49336,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "a",
-      { staticClass: "navbar-brand col-md-2", attrs: { href: "#" } },
+      {
+        staticClass: "navbar-brand col-md-2 text-center text-md-left",
+        attrs: { href: "#" }
+      },
       [
         _c("img", {
           attrs: { src: __webpack_require__(/*! @/imgs/logomoi.png */ "./resources/imgs/logomoi.png"), alt: "logo hueic" }
@@ -68744,7 +68753,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_modules_donates_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/js/modules/donates.js */ "./resources/js/modules/donates.js");
 /* harmony import */ var _js_modules_foundings_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/js/modules/foundings.js */ "./resources/js/modules/foundings.js");
 /* harmony import */ var _js_modules_menus_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/js/modules/menus.js */ "./resources/js/modules/menus.js");
-/* harmony import */ var _js_modules_customhtmls_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/js/modules/customhtmls.js */ "./resources/js/modules/customhtmls.js");
+/* harmony import */ var _js_modules_customhtmls_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/js/modules/customhtmls.js */ "./resources/js/modules/customhtmls.js");
 /*
 |-------------------------------------------------------------------------------
 | VUEX store.js
@@ -68769,7 +68778,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     donates: _js_modules_donates_js__WEBPACK_IMPORTED_MODULE_2__["donates"],
     foundings: _js_modules_foundings_js__WEBPACK_IMPORTED_MODULE_3__["foundings"],
     menus: _js_modules_menus_js__WEBPACK_IMPORTED_MODULE_4__["menus"],
-    customhtmls: _js_modules_customhtmls_js__WEBPACK_IMPORTED_MODULE_6__["customhtmls"]
+    customhtmls: _js_modules_customhtmls_js__WEBPACK_IMPORTED_MODULE_5__["customhtmls"]
   }
 }));
 
