@@ -52,6 +52,9 @@
                                 <a class="nav-link" href="/home">Home</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/backend/custom-html">Custom Html</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="/backend/donate">Donate</a>
                             </li>
                             <li class="nav-item">
@@ -87,5 +90,31 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: '#content',
+        height: 300,
+        plugins: 'codesample code advlist image',
+        codesample_languages: [
+            {text: 'HTML/XML', value: 'markup'},
+            {text: 'CSS', value: 'css'},
+        ],
+        toolbar: 'codesample code forecolor backcolor advlist image',
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tiny.cloud/css/codepen.min.css'
+        ]
+      });
+    </script>
+    <style>
+    @media (min-width: 576px){
+        .modal-dialog {
+            max-width: 700px;
+            margin: 1.75rem auto;
+        }
+    }
+    .tox-notifications-container{display:none}
+</style>
 </body>
 </html>

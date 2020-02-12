@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::group(['prefix'=>'backend','middleware' => ['auth']], function(){
     Route::resource('donate', 'Web\DonateController');
+    Route::resource('custom-html', 'Web\CustomHtmlController');
+    Route::Post('custom-html/{id}', 'Web\CustomHtmlController@update')->where('id', '[0-9]+');
     Route::resource('menus', 'Web\MenuController');
     Route::Post('founding/{id}', 'Web\FoundingController@update')->where('id', '[0-9]+');
 
