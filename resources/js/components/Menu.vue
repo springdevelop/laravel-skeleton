@@ -31,9 +31,7 @@ export default {
    justify-content: flex-end;
 
 }
-.nav-item{
-   padding: 5px 10px;
-}
+
 .navbar-expand-md .navbar-nav .nav-link{
    padding-left: 0!important;
    padding-right: 0!important;
@@ -49,24 +47,28 @@ export default {
    left: 20px;
    z-index: 100;
 }
-.nav-item:hover .nav-link{
-   color: #F9853C;
+@media screen and (min-width: 768px) {
+   .nav-item{
+   padding: 5px 10px;
 }
-.nav-item .nav-link::before{
-   content: "";
-   width: 0;
-   height: 1px;
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   z-index: 1000;
-   transition: all 0.2s linear;
-   background-color: #F9853C;
+   .nav-item:hover .nav-link{
+      color: #F9853C;
+   }
+   .nav-item .nav-link::before{
+      content: "";
+      width: 0;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      transition: all 0.2s linear;
+      background-color: #F9853C;
+   }
+   .nav-item:hover .nav-link::before{
+      width: 100%;
+   }
 }
-.nav-item:hover .nav-link::before{
-   width: 100%;
-}
-
 @media screen and (max-width: 767px) {
    .collapse:not(.show) {
     display: block;
@@ -98,7 +100,7 @@ export default {
       background-color: rgba(0, 0, 0, 0.9);
       box-shadow: -5px 0 5px -5px #333;
       z-index: 1000;
-      transition: all 0.5s linear;
+      transition: all 0.2s linear;
    }
    #menu-top:not(.show){
       transform: translate(100%, 0);
@@ -107,7 +109,7 @@ export default {
       position: fixed;
       height: 100vh;
       overflow:unset;
-      transition: all 0.5 linear;
+      transition: none;
    }
 }
 </style>
