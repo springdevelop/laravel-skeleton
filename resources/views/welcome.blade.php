@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta property="og:locale" content="vi_VN" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Bạn muốn đồng hành cùng HueIC chung tay vì cộng đồng?" />
+<meta property="og:title" content="HueIC chung tay vì cộng đồng" />
 <meta property="og:description" content='Cấp phát miễn phí Nước rửa tay khô diệt khuẩn, chứa cồn y tế, nano Ag, tinh dầu tự nhiên, cùng bà con vượt qua mùa dịch.' />
 <meta property="og:url" content="https://congdong.hueic.edu.vn" />
 <meta property="og:site_name" content="Chương trình vì cộng đồng của Trường cao đẳng công nghiệp huế" />
