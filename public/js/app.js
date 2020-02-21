@@ -1854,7 +1854,7 @@ __webpack_require__.r(__webpack_exports__);
     foundings: function foundings() {
       return this.$store.getters.getFoundings.sort(function (a, b) {
         return new Date(a.date_founding) - new Date(b.date_founding);
-      }).slice(0, 5);
+      }).slice(-5);
     }
   },
   methods: {
