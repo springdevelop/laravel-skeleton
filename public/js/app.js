@@ -1703,6 +1703,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    position: {
+      type: String,
+      "default": 'top'
+    }
+  },
   created: function created() {
     this.$store.dispatch('loadCustomhtmls');
   },
@@ -1711,8 +1717,10 @@ __webpack_require__.r(__webpack_exports__);
       return this.$store.getters.getCustomhtmls;
     },
     html_top: function html_top() {
+      var _this = this;
+
       return this.$store.getters.getCustomhtmls.filter(function (x) {
-        return x.position === 'top';
+        return x.position === _this.position;
       }).map(function (x) {
         return x.content;
       })[0];
@@ -1846,7 +1854,7 @@ __webpack_require__.r(__webpack_exports__);
     foundings: function foundings() {
       return this.$store.getters.getFoundings.sort(function (a, b) {
         return new Date(a.date_founding) - new Date(b.date_founding);
-      });
+      }).slice(0, 5);
     }
   },
   methods: {
@@ -1952,6 +1960,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_components_Donate_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/js/components/Donate.vue */ "./resources/js/components/Donate.vue");
 /* harmony import */ var _js_components_Footer_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/js/components/Footer.vue */ "./resources/js/components/Footer.vue");
 /* harmony import */ var _js_components_CustomHtml_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/js/components/CustomHtml.vue */ "./resources/js/components/CustomHtml.vue");
+//
+//
 //
 //
 //
@@ -49383,13 +49393,17 @@ var render = function() {
             "main",
             { staticClass: "py-4", attrs: { role: "main" } },
             [
-              _c("custom-html"),
+              _c("custom-html", { attrs: { position: "top" } }),
               _vm._v(" "),
               _c("founding"),
               _vm._v(" "),
+              _c("custom-html", { attrs: { position: "mid" } }),
+              _vm._v(" "),
               _c("div", { staticClass: "section-donate" }, [
                 _c("div", { staticClass: "container" }, [_c("donate")], 1)
-              ])
+              ]),
+              _vm._v(" "),
+              _c("custom-html", { attrs: { position: "bottom" } })
             ],
             1
           ),

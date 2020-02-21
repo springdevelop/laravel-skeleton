@@ -29,7 +29,7 @@ export default {
         foundings: function() {
             return this.$store.getters.getFoundings.sort( ( a, b) => {
                 return new Date(a.date_founding) - new Date(b.date_founding);
-            })
+            }).slice(0,5)
         }
     },
     methods: {

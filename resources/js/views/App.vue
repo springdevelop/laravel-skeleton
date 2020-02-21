@@ -3,14 +3,16 @@
      <navigation></navigation>
      <div class="">
             <main role="main" class="py-4">
-                 <custom-html></custom-html>
+                 <custom-html position="top"></custom-html>
                  <founding></founding>
+                 <custom-html position="mid"></custom-html>
                  <div class="section-donate">
                       <div class="container">
                          <donate></donate>
                       </div>
 
                  </div>
+                 <custom-html position="bottom"></custom-html>
             </main>
           <page-footer class="text-center footer py-3"></page-footer>
 
