@@ -5,6 +5,13 @@
 </template>
 <script>
 export default {
+    props: {
+        position: {
+            type: String,
+            default: 'top'
+        }
+        
+    },
     created() {
         this.$store.dispatch('loadCustomhtmls')
     },
@@ -13,7 +20,7 @@ export default {
             return this.$store.getters.getCustomhtmls;
         },
         html_top: function() {
-            return this.$store.getters.getCustomhtmls.filter(x => x.position === 'top').map(x => x.content)[0];
+            return this.$store.getters.getCustomhtmls.filter(x => x.position === this.position).map(x => x.content)[0];
         }
     },
 }
