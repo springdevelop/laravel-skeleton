@@ -49395,13 +49395,7 @@ var render = function() {
             [
               _c("custom-html", { attrs: { position: "top" } }),
               _vm._v(" "),
-              _c("founding"),
-              _vm._v(" "),
               _c("custom-html", { attrs: { position: "mid" } }),
-              _vm._v(" "),
-              _c("div", { staticClass: "section-donate" }, [
-                _c("div", { staticClass: "container" }, [_c("donate")], 1)
-              ]),
               _vm._v(" "),
               _c("custom-html", { attrs: { position: "bottom" } })
             ],
